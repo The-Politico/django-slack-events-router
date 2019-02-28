@@ -15,5 +15,8 @@ djangorestframework = "*"
 "psycopg2" = "*"
 "eventsrouter" = {path = "./..", editable = true}
 "ed0a5ba" = {path = "./..", editable = true}
+requests = "*"
+celery = "*"
+django-politico-token-service = "*"
 
 [dev-packages]

@@ -1,0 +1,416 @@
+[
+  {
+    "model": "eventsrouter.event",
+     "fields": {
+      "name": "app_mention"
+    }
+  },
+  {
+    "model": "eventsrouter.event",
+     "fields": {
+      "name": "app_rate_limited"
+    }
+  },
+  {
+    "model": "eventsrouter.event",
+     "fields": {
+      "name": "app_uninstalled"
+    }
+  },
+  {
+    "model": "eventsrouter.event",
+     "fields": {
+      "name": "channel_archive"
+    }
+  },
+  {
+    "model": "eventsrouter.event",
+     "fields": {
+      "name": "channel_created"
+    }
+  },
+  {
+    "model": "eventsrouter.event",
+     "fields": {
+      "name": "channel_deleted"
+    }
+  },
+  {
+    "model": "eventsrouter.event",
+     "fields": {
+      "name": "channel_history_changed"
+    }
+  },
+  {
+    "model": "eventsrouter.event",
+     "fields": {
+      "name": "channel_left"
+    }
+  },
+  {
+    "model": "eventsrouter.event",
+     "fields": {
+      "name": "channel_rename"
+    }
+  },
+  {
+    "model": "eventsrouter.event",
+     "fields": {
+      "name": "channel_unarchive"
+    }
+  },
+  {
+    "model": "eventsrouter.event",
+     "fields": {
+      "name": "dnd_updated"
+    }
+  },
+  {
+    "model": "eventsrouter.event",
+     "fields": {
+      "name": "dnd_updated_user"
+    }
+  },
+  {
+    "model": "eventsrouter.event",
+     "fields": {
+      "name": "email_domain_changed"
+    }
+  },
+  {
+    "model": "eventsrouter.event",
+     "fields": {
+      "name": "emoji_changed"
+    }
+  },
+  {
+    "model": "eventsrouter.event",
+     "fields": {
+      "name": "file_change"
+    }
+  },
+  {
+    "model": "eventsrouter.event",
+     "fields": {
+      "name": "file_comment_added"
+    }
+  },
+  {
+    "model": "eventsrouter.event",
+     "fields": {
+      "name": "file_comment_deleted"
+    }
+  },
+  {
+    "model": "eventsrouter.event",
+     "fields": {
+      "name": "file_comment_edited"
+    }
+  },
+  {
+    "model": "eventsrouter.event",
+     "fields": {
+      "name": "file_created"
+    }
+  },
+  {
+    "model": "eventsrouter.event",
+     "fields": {
+      "name": "file_deleted"
+    }
+  },
+  {
+    "model": "eventsrouter.event",
+     "fields": {
+      "name": "file_public"
+    }
+  },
+  {
+    "model": "eventsrouter.event",
+     "fields": {
+      "name": "file_shared"
+    }
+  },
+  {
+    "model": "eventsrouter.event",
+     "fields": {
+      "name": "file_unshared"
+    }
+  },
+  {
+    "model": "eventsrouter.event",
+     "fields": {
+      "name": "grid_migration_finished"
+    }
+  },
+  {
+    "model": "eventsrouter.event",
+     "fields": {
+      "name": "grid_migration_started"
+    }
+  },
+  {
+    "model": "eventsrouter.event",
+     "fields": {
+      "name": "group_archive"
+    }
+  },
+  {
+    "model": "eventsrouter.event",
+     "fields": {
+      "name": "group_close"
+    }
+  },
+  {
+    "model": "eventsrouter.event",
+     "fields": {
+      "name": "group_deleted"
+    }
+  },
+  {
+    "model": "eventsrouter.event",
+     "fields": {
+      "name": "group_history_changed"
+    }
+  },
+  {
+    "model": "eventsrouter.event",
+     "fields": {
+      "name": "group_left"
+    }
+  },
+  {
+    "model": "eventsrouter.event",
+     "fields": {
+      "name": "group_open"
+    }
+  },
+  {
+    "model": "eventsrouter.event",
+     "fields": {
+      "name": "group_rename"
+    }
+  },
+  {
+    "model": "eventsrouter.event",
+     "fields": {
+      "name": "group_unarchive"
+    }
+  },
+  {
+    "model": "eventsrouter.event",
+     "fields": {
+      "name": "im_close"
+    }
+  },
+  {
+    "model": "eventsrouter.event",
+     "fields": {
+      "name": "im_created"
+    }
+  },
+  {
+    "model": "eventsrouter.event",
+     "fields": {
+      "name": "im_history_changed"
+    }
+  },
+  {
+    "model": "eventsrouter.event",
+     "fields": {
+      "name": "im_open"
+    }
+  },
+  {
+    "model": "eventsrouter.event",
+     "fields": {
+      "name": "link_shared"
+    }
+  },
+  {
+    "model": "eventsrouter.event",
+     "fields": {
+      "name": "member_joined_channel"
+    }
+  },
+  {
+    "model": "eventsrouter.event",
+     "fields": {
+      "name": "member_left_channel"
+    }
+  },
+  {
+    "model": "eventsrouter.event",
+     "fields": {
+      "name": "message"
+    }
+  },
+  {
+    "model": "eventsrouter.event",
+     "fields": {
+      "name": "message.app_home"
+    }
+  },
+  {
+    "model": "eventsrouter.event",
+     "fields": {
+      "name": "message.channels"
+    }
+  },
+  {
+    "model": "eventsrouter.event",
+     "fields": {
+      "name": "message.groups"
+    }
+  },
+  {
+    "model": "eventsrouter.event",
+     "fields": {
+      "name": "message.im"
+    }
+  },
+  {
+    "model": "eventsrouter.event",
+     "fields": {
+      "name": "message.mpim"
+    }
+  },
+  {
+    "model": "eventsrouter.event",
+     "fields": {
+      "name": "pin_added"
+    }
+  },
+  {
+    "model": "eventsrouter.event",
+     "fields": {
+      "name": "pin_removed"
+    }
+  },
+  {
+    "model": "eventsrouter.event",
+     "fields": {
+      "name": "reaction_added"
+    }
+  },
+  {
+    "model": "eventsrouter.event",
+     "fields": {
+      "name": "reaction_removed"
+    }
+  },
+  {
+    "model": "eventsrouter.event",
+     "fields": {
+      "name": "resources_added"
+    }
+  },
+  {
+    "model": "eventsrouter.event",
+     "fields": {
+      "name": "resources_removed"
+    }
+  },
+  {
+    "model": "eventsrouter.event",
+     "fields": {
+      "name": "scope_denied"
+    }
+  },
+  {
+    "model": "eventsrouter.event",
+     "fields": {
+      "name": "scope_granted"
+    }
+  },
+  {
+    "model": "eventsrouter.event",
+     "fields": {
+      "name": "star_added"
+    }
+  },
+  {
+    "model": "eventsrouter.event",
+     "fields": {
+      "name": "star_removed"
+    }
+  },
+  {
+    "model": "eventsrouter.event",
+     "fields": {
+      "name": "subteam_created"
+    }
+  },
+  {
+    "model": "eventsrouter.event",
+     "fields": {
+      "name": "subteam_members_changed"
+    }
+  },
+  {
+    "model": "eventsrouter.event",
+     "fields": {
+      "name": "subteam_self_added"
+    }
+  },
+  {
+    "model": "eventsrouter.event",
+     "fields": {
+      "name": "subteam_self_removed"
+    }
+  },
+  {
+    "model": "eventsrouter.event",
+     "fields": {
+      "name": "subteam_updated"
+    }
+  },
+  {
+    "model": "eventsrouter.event",
+     "fields": {
+      "name": "team_domain_change"
+    }
+  },
+  {
+    "model": "eventsrouter.event",
+     "fields": {
+      "name": "team_join"
+    }
+  },
+  {
+    "model": "eventsrouter.event",
+     "fields": {
+      "name": "team_rename"
+    }
+  },
+  {
+    "model": "eventsrouter.event",
+     "fields": {
+      "name": "tokens_revoked"
+    }
+  },
+  {
+    "model": "eventsrouter.event",
+     "fields": {
+      "name": "user_change"
+    }
+  },
+  {
+    "model": "eventsrouter.event",
+     "fields": {
+      "name": "user_resource_denied"
+    }
+  },
+  {
+    "model": "eventsrouter.event",
+     "fields": {
+      "name": "user_resource_granted"
+    }
+  },
+  {
+    "model": "eventsrouter.event",
+     "fields": {
+      "name": "user_resource_removed"
+    }
+  }
+]
