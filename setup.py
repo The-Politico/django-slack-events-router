@@ -1,8 +1,10 @@
 from setuptools import find_packages, setup
 
+import eventsrouter
+
 setup(
-    name="django-slack-events-router",
-    version="0.0.27pxFpGG7fICM4UhlU2Un",
+    name=eventsrouter.__package__,
+    version=eventsrouter.__version__,
     description="Routes Slack Events API payloads to their final destination",
     url="https://github.com/The-Politico/django-slack-events-router",
     author="POLITICO interactive news",
