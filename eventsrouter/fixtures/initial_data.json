@@ -248,36 +248,6 @@
   {
     "model": "eventsrouter.event",
      "fields": {
-      "name": "message.app_home"
-    }
-  },
-  {
-    "model": "eventsrouter.event",
-     "fields": {
-      "name": "message.channels"
-    }
-  },
-  {
-    "model": "eventsrouter.event",
-     "fields": {
-      "name": "message.groups"
-    }
-  },
-  {
-    "model": "eventsrouter.event",
-     "fields": {
-      "name": "message.im"
-    }
-  },
-  {
-    "model": "eventsrouter.event",
-     "fields": {
-      "name": "message.mpim"
-    }
-  },
-  {
-    "model": "eventsrouter.event",
-     "fields": {
       "name": "pin_added"
     }
   },
