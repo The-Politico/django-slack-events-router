@@ -8,7 +8,10 @@ from eventsrouter.models import Route
 
 @shared_task(acks_late=True)
 def post_webhook(endpoint, data):
-    requests.post(endpoint, json=data)
+    try:
+        requests.post(endpoint, json=data, timeout=5)
+    except requests.exceptions.Timeout:
+        pass
 
 
 @shared_task(acks_late=True)
@@ -23,6 +26,7 @@ def verify_webhook(pk):
                 "type": "url_verification",
                 "challenge": challenge,
             },
+            timeout=5,
         )
         if response.status_code == requests.codes.ok:
             if clean_response(response.text) == challenge:

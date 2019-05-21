@@ -2,7 +2,7 @@ from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from eventsrouter.conf import settings
-from ..models import Channel, Event, Route
+from ..models import Route
 from ..celery import post_webhook
 
 
