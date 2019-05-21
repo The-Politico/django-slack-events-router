@@ -38,7 +38,7 @@ class Events(APIView):
                 if filter_route_by_channel(
                     route, channel_id
                 ) and filter_route_by_event(route, event_name):
-                    post_webhook(route.endpoint, slack_message)
+                    post_webhook.delay(route.endpoint, slack_message)
 
         return Response(status=status.HTTP_200_OK)
 
@@ -47,6 +47,8 @@ def get_channel_id(data):
     channel_id = data.get("event", {}).get("channel", None)
     if channel_id is None:
         channel_id = data.get("event", {}).get("item", {}).get("channel", None)
+    if channel_id is None:
+        channel_id = data.get("event", {}).get("channel_id", None)
 
     return channel_id
 
