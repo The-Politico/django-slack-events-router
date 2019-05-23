@@ -30,10 +30,10 @@ class Events(APIView):
             # We forward Slack's verification headers so downstream apps can
             # choose to also verify requests.
             headers = {
-                "X-SLACK-REQUEST-TIMESTAMP": request.META.get(
+                "X-Slack-Request-Timestamp": request.META.get(
                     "HTTP_X_SLACK_REQUEST_TIMESTAMP"
                 ),
-                "X-SLACK-SIGNATURE": request.META.get(
+                "X-Slack-Signature": request.META.get(
                     "HTTP_X_SLACK_SIGNATURE"
                 ),
             }
