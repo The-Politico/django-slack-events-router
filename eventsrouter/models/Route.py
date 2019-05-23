@@ -8,8 +8,9 @@ class Route(models.Model):
     An endpoint to send event payloads to
     """
 
-    endpoint = models.URLField(unique=True)
-    verified = models.BooleanField(default=False)
+    endpoint = models.URLField(
+        unique=True, help_text="URL to another app's API"
+    )
 
     channel_filters = models.ManyToManyField(
         Channel,

@@ -12,11 +12,12 @@ pytest = "*"
 django = ">=2.0"
 djangorestframework = "*"
 "dj-database-url" = "*"
-"psycopg2" = "*"
-"eventsrouter" = {path = "./..", editable = true}
-"ed0a5ba" = {path = "./..", editable = true}
+"psycopg2-binary" = "*"
+eventsrouter = {path = "./..",editable = true}
+ed0a5ba = {path = "./..",editable = true}
 requests = "*"
 celery = "*"
 django-politico-token-service = "*"
+politico-toolbox = ">=0.0.7"
 
 [dev-packages]

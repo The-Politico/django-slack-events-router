@@ -10,18 +10,8 @@ class Settings:
     pass
 
 
-Settings.SLACK_VERIFICATION_TOKEN = getattr(
-    project_settings, "EVENTSROUTER_SLACK_VERIFICATION_TOKEN", ""
-)
-
-Settings.AUTH_DECORATOR = getattr(
-    project_settings,
-    "EVENTSROUTER_AUTH_DECORATOR",
-    "django.contrib.auth.decorators.staff_member_required",
-)
-
-Settings.SECRET_KEY = getattr(
-    project_settings, "EVENTSROUTER_SECRET_KEY", "a-bad-secret-key"
+Settings.VERIFICATION_TOKEN = getattr(
+    project_settings, "EVENTSROUTER_VERIFICATION_TOKEN", ""
 )
 
 settings = Settings

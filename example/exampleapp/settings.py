@@ -93,6 +93,4 @@ STATIC_URL = "/static/"
 #########################
 # eventsrouter settings
 
-EVENTSROUTER_SLACK_VERIFICATION_TOKEN = os.getenv(
-    "SLACK_VERIFICATION_TOKEN", None
-)
+EVENTSROUTER_VERIFICATION_TOKEN = "A_BAD_TOKEN"
