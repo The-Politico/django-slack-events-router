@@ -72,7 +72,7 @@ We recommend using the [utility functions](https://the-politico.github.io/politi
 
 ![](https://a.slack-edge.com/779d2/img/api/signing_secrets_admin_page.png)
 
-3. Enable [events subscriptions](https://api.slack.com/events-api) in your app and configure the Request URL to hit events-router's `/events/` endpoint. (Your app will need to be deployed in order to verify the URL with Slack.)
+3. Enable [events subscriptions](https://api.slack.com/events-api) in your app and configure the Request URL to hit eventsrouter's `/events/` endpoint. (Your app will need to be deployed in order to verify the URL with Slack.)
 
 4. Subscribe to all the workspace events you want to route downstream.
 
