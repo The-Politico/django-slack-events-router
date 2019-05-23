@@ -6,7 +6,7 @@
 
 ### Why this?
 
-If your org is pinching pennies by hanging onto the free version of Slack, you're likely already very aware of the limit Slack places on the number of custom apps you can install in your free Slack team. Since each app is also limited to one endpoint for receiving events from the Slack Events API, you may already be juggling your custom integrations or stopped building new ones altogether.
+Pinching pennies and hanging on to the free version of Slack? You're likely very aware of [the limit](https://get.slack.help/hc/en-us/articles/115002422943-Message-file-storage-and-app-limits-on-the-Free-plan) Slack places on the number of custom apps you can install in your free Slack team. Since each app is also limited to one endpoint for receiving events from the Slack Events API, you may already be juggling your custom integrations or stopped building new ones altogether.
 
 django-slack-events-router lets you extend your use of free Slack by creating an events router to send Slack Events API messages to any number of endpoints via custom webhook routes. You can then configure filters for your custom routes based on event type or channel, giving you a powerful way to filter the Event API's firehose to just the messages your downstream apps need.
 
@@ -48,7 +48,7 @@ django-slack-events-router lets you extend your use of free Slack by creating an
 
 ### Usage
 
-Once you've install and configured the eventsrouter app, you can register downstream apps that will receive your re-routed Slack Events API messages. Just create a new Route model manually via the django admin or programmatically using the eventsrouter's API.
+Once you've installed and configured the eventsrouter app, you can register downstream apps that will receive your re-routed Slack Events API messages. Just create a new Route model manually via the django admin or programmatically using the eventsrouter's API.
 
 When you do, you can also create filters for your route to send only events of a certain type or from a particular channel. Exclude both to send all event messages. (Remember, you also need to register events with your Slack app before they'll be sent to the eventsrouter! See [Configuring your app in Slack](#configuring-your-app-in-slack).)
 
