@@ -23,7 +23,7 @@ django-slack-events-router lets you extend your use of free Slack by creating an
   $ python manage.py migrate
   ```
 
-3. [Configure an app in Slack](#configuring-your-slack-app), get its [signing secret](https://api.slack.com/docs/verifying-requests-from-slack#app_management_updates) and export it as the environment variable `SLACK_SIGNING_SECRET`.
+3. [Configure an app in Slack](#configuring-your-app-in-slack), get its [signing secret](https://api.slack.com/docs/verifying-requests-from-slack#app_management_updates) and export it as the environment variable `SLACK_SIGNING_SECRET`.
 
 4. Add the app to your Django project and configure settings, including a verification token other apps can use to access the eventsrouter's own API.
 
