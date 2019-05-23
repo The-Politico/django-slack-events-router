@@ -11,7 +11,7 @@ class Settings:
 
 
 Settings.VERIFICATION_TOKEN = getattr(
-    project_settings, "EVENTSROUTER_VERIFICATION_TOKEN", ""
+    project_settings, "EVENTSROUTER_VERIFICATION_TOKEN", "A_BAD_TOKEN"
 )
 
 settings = Settings

@@ -93,4 +93,4 @@ STATIC_URL = "/static/"
 #########################
 # eventsrouter settings
 
-EVENTSROUTER_VERIFICATION_TOKEN = "A_BAD_TOKEN"
+EVENTSROUTER_VERIFICATION_TOKEN = "A_FAKE_TOKEN"

@@ -25,7 +25,7 @@ django-slack-events-router lets you extend your use of free Slack by creating an
 
 3. [Configure an app in Slack](#configuring-your-app-in-slack), get its [signing secret](https://api.slack.com/docs/verifying-requests-from-slack#app_management_updates) and export it as the environment variable `SLACK_SIGNING_SECRET`.
 
-4. Add the app to your Django project and configure settings, including a verification token other apps can use to access the eventsrouter's own API.
+4. Add the app to your Django project and configure settings, including a verification token other apps can use to verify messages come from eventsrouter and access the eventsrouter's own API.
 
   ```python
   # settings.py
@@ -52,17 +52,17 @@ Once you've installed and configured the eventsrouter app, you can register down
 
 When you do, you can also create filters for your route to send only events of a certain type or from a particular channel. Exclude both to send all event messages. (Remember, you also need to register events with your Slack app before they'll be sent to the eventsrouter! See [Configuring your app in Slack](#configuring-your-app-in-slack).)
 
-The goal is that downstream applications should be able to accept messages from eventsrouter using the same code they would use if they were pointed directly at the Events API.
+The goal is that downstream applications should be able to accept messages from eventsrouter using the same code they would use if they were pointed directly at the Events API. That means the eventsrouter simply forwards the payload Slack sends, excluding headers.
 
-That means the eventsrouter simply forwards the payload Slack sends, including  signing secret headers. (We recommend your app verify messages, see [Verifying messages from Slack](#verifying-messages-from-slack).)
-
-### Verifying messages from Slack
+### Verifying messages from Slack and eventsrouter
 
 eventsrouter will verify messages come from Slack using your app's [signing secret](https://api.slack.com/docs/verifying-requests-from-slack), which should be exported as the environment variable `SLACK_SIGNING_SECRET`.
 
-When it routes messages to the endpoints in your Route models, it will resend the `X-Slack-Signature` and `X-Slack-Request-Timestamp` headers with the payload so your downstream app can also verify messages.
+When it routes messages to the endpoints in your Route models, it will send the payload with the value of `EVENTSROUTER_VERIFICATION_TOKEN`. To authenticate messages from eventsrouter, check for the token in the Authorization HTTP header. The key will be prefixed by the string literal "Token", with whitespace separating the two strings. For example:
 
-We recommend using the [utility functions](https://the-politico.github.io/politico-toolbox/toolbox/slack/verify.html) in our [`politico-toolbox`](https://github.com/The-Politico/politico-toolbox) app to verify messages. See also the custom authentication methods for [Django Rest Framework](https://the-politico.github.io/politico-toolbox/toolbox/django/rest/authentication/slack.html) and [Flask](https://the-politico.github.io/politico-toolbox/toolbox/flask/authentication/slack.html).
+```
+Authorization: Token YOUR_TOKEN_HERE
+```
 
 ### Configuring your app in Slack
 

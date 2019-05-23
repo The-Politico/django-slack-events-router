@@ -27,25 +27,12 @@ class Events(APIView):
 
             routes = Route.objects.all()
 
-            # We forward Slack's verification headers so downstream apps can
-            # choose to also verify requests.
-            headers = {
-                "X-Slack-Request-Timestamp": request.META.get(
-                    "HTTP_X_SLACK_REQUEST_TIMESTAMP"
-                ),
-                "X-Slack-Signature": request.META.get(
-                    "HTTP_X_SLACK_SIGNATURE"
-                ),
-            }
-
             for route in routes:
                 if filter_route_by_channel(
                     route, channel_id
                 ) and filter_route_by_event(route, event_name):
                     post_webhook.delay(
-                        endpoint=route.endpoint,
-                        data=slack_message,
-                        headers=headers,
+                        endpoint=route.endpoint, data=slack_message
                     )
 
         return Response(status=status.HTTP_200_OK)
